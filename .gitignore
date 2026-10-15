@@ -1,0 +1,58 @@
+# ==============================================================================
+# Sentinel IDS & CODEX Hybrid IDS: Git Ignore Specification
+# ==============================================================================
+
+# Virtual Environments & Package Managers
+.venv/
+venv/
+ENV/
+node_modules/
+.npm/
+bun.lockb
+
+# Large Datasets & Raw Network Traffic (Exceeds GitHub limits or contains bulk captures)
+MachineLearningCSV/
+alerts_portscan.csv
+alerts_portscan_v2.csv
+*.pcap
+*.pcapng
+
+# Private & University Student Identification / Marks Records
+Marks-Phase1-Capstone Project-2026-27.pdf
+*Marks*.pdf
+*marks*.pdf
+
+# Python Compiled Artifacts & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend Production Builds & Serverless Outputs
+.output/
+.wrangler/
+dist/
+build/
+.nitro/
+*.tsbuildinfo
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs & Diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

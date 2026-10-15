@@ -1,0 +1,61 @@
+{
+  "model": "RandomForest",
+  "version": "1.0",
+  "dataset": "MachineLearningCSV\\MachineLearningCVE\\Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+  "classes": [
+    "BENIGN",
+    "PortScan"
+  ],
+  "n_features": 76,
+  "train_flows": 149643,
+  "test_flows": 64134,
+  "config": {
+    "benign_label": "BENIGN",
+    "scan_unique_ports": 20,
+    "syn_flood_rate": 1000.0,
+    "high_packet_rate": 5000.0,
+    "w_ml": 0.6,
+    "w_rule": 0.4,
+    "sev_high": 0.8,
+    "sev_medium": 0.5,
+    "sev_low": 0.3
+  },
+  "test_metrics_binary": {
+    "ml_only": {
+      "accuracy": 0.999906445878941,
+      "precision": 1.0,
+      "recall": 0.9997794847293175,
+      "f1": 0.9998897302065721,
+      "fpr": 0.0,
+      "fnr": 0.00022051527068249477
+    },
+    "rules_only": {
+      "accuracy": 0.7773723765865219,
+      "precision": 0.6579995601280516,
+      "recall": 0.989599029732809,
+      "f1": 0.7904300601790695,
+      "fpr": 0.379011509817197,
+      "fnr": 0.010400970267191003
+    },
+    "hybrid": {
+      "accuracy": 0.9998596688184115,
+      "precision": 1.0,
+      "recall": 0.9996692270939762,
+      "f1": 0.9998345861897848,
+      "fpr": 0.0,
+      "fnr": 0.00033077290602374215
+    }
+  },
+  "top_features": {
+    "Total Length of Fwd Packets": 0.1013,
+    "Subflow Fwd Bytes": 0.0958,
+    "Fwd Packet Length Max": 0.065,
+    "Packet Length Mean": 0.0615,
+    "Avg Fwd Segment Size": 0.0606,
+    "Bwd Packets/s": 0.054,
+    "Average Packet Size": 0.0526,
+    "Fwd Packet Length Mean": 0.0516,
+    "PSH Flag Count": 0.0499,
+    "Packet Length Variance": 0.0405
+  }
+}
