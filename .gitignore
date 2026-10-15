@@ -56,3 +56,7 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*captured*.csv
+*live*.csv
+downloaded_live_flows.csv
+
